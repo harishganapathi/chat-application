@@ -1,0 +1,92 @@
+<!doctype html>
+  <html>
+   <head>
+     <style media="screen">
+
+     </style>
+    <title>Chat Application</title>
+    <!--<link rel='stylesheet' href='/public/css/style.css' type='text/css'/>-->
+    <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+    <script src="/public/javascript/chat.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  </head>
+
+  <body style="background:black;">
+    <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">chatRoom</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#">Login</a></li>
+      <li><a href="#">Chat</a></li>
+      <li><a href="views/draw.html">Draw</a></li>
+      <li><a href="#">Logout</a></li>
+    </ul>
+  </div>
+</nav>
+
+    <div class="container " >
+
+              <div  class=" col-md-5">
+
+                      <div class="panel panel-primary" >
+                          <div class="panel-heading">
+
+
+                                <h3 class="panel-title">
+                                  <div class="text-center">
+                                  <input type = "hidden"  onkeyup="notifyTyping();"/></div>
+
+                                    <div class="text-center">Chat room</div>  </h3>
+                                <br>
+                                <span id="alertuser"></span>
+
+                          </div>
+                          <div class="panel-heading">
+                    <input type =hidden  onkeyup="notifyTyping();"/>
+                                <h3 class="panel-title">
+                                  <div class="text-center"></div>
+                                  <span id="notifyUser"></span>
+                                </h3>
+                          </div>
+
+                          <div class="panel-body"style="background:lightgrey;">
+                            <ul id="messages"></ul>
+                                <form id="form" action="" onsubmit="return submitinfo();" >
+                                <input type="hidden" id="user" value=""/>
+                            </form>
+                          </div>
+                          <div class="panel-footer clearfix">
+                            <div class="row text-center  ">
+                            <form id="form" action="" onsubmit="return submitinfo();"  >
+                              <div class="col-md-8 input-group ">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-comment"></i></span>
+                            <input id="msg" class=form-control rows=2 autocomplete="off"  onkeyup="notifyTyping();" placeholder="Message....."  ></input>
+                            <span class="input-group-btn">
+
+                            <button type="submit" class="btn btn-warning " value="Send"><span class="glyphicon glyphicon-send">  Send
+                            </span>
+                          </button>
+
+                        </span>
+                          </div>
+                          </form>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+            </div>
+</div>
+</div>
+<!--
+<div class="text-center">
+    <canvas id="sample_canvas" width="500" height="500" style="border:2px solid #00ff00;">
+</div>
+-->
+  </body>
+</html>
