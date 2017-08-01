@@ -16,5 +16,5 @@ io.on('connection', function(socket){
   });
 });
 http.listen(3000, function(){
-  console.log('hey dude listen to port 3k ;)');
+  console.log('i am running on port 3k ;)');
 });
